@@ -1,18 +1,24 @@
 import React from 'react';
-import styles from '../styles/ProductCard.module.css';
+import '../styles/ProductCard.css';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onRemove }) => {
   return (
-    <div className>
-      {/* TODO: Apply conditional class to <div> above for out-of-stock items */}
-      
-      {/* TODO: Display product name */}
+    <>
+      {/* Use a fragment to group elements without adding unnecessary DOM nodes */}
+      <div className={product.inStock ? 'inStock' : 'outOfStockClass'}>
+          {/* Display product name */}
+        <h2>{product.name}</h2>
 
-      {/* TODO: Display product price */}
+        {/* Display product price */}
+        <p>Price: {product.price}</p>
 
-      {/* TODO: Show if the product is in stock or out of stock */}
-      
-    </div>
+        {/* Show if the product is in stock or out of stock */}
+        <p>{product.inStock ? 'In Stock' : 'Out of Stock'}</p>
+
+        {/* Button to remove product */}
+        <button onClick={() => onRemove(product.id)}>Remove</button>
+      </div>
+    </>
   );
 };
 

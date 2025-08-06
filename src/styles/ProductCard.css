@@ -1,0 +1,18 @@
+.inStock {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.outOfStock {
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  background-color: #ffecec;
+  color: #c0392b;
+  box-shadow: 2px 2px 6px rgba(255, 107, 107, 0.3);
+}
